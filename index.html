@@ -938,6 +938,10 @@ html.has-ship,html.has-ship *{cursor:none!important}
 @keyframes scFlick{to{transform:scaleX(.75) scaleY(.88)}}
 .ship-cursor.hot svg{transform:scale(1.25);filter:drop-shadow(0 0 8px rgba(232,54,79,.95))}
 .ship-cursor.down svg{transform:scale(.88)}
+.moon-node .lbl{white-space:normal;text-align:center;width:max-content;max-width:180px;line-height:1.3}
+
+.moon-node .lbl small{display:block;margin-top:2px;font-size:11px;font-weight:500;color:var(--dim);opacity:.85;font-style:italic}
+.cycle-core .sp-len{display:block;font-style:normal;font-size:12px;color:#ffb3bd;margin:2px 0 4px;letter-spacing:.04em}
 /* ---------- readable diagram text (fluid, mobile-safe) ---------- */
 .fm-eng b{font-size:clamp(13.5px,.62rem + .5vw,16px)}
 .fm-eng small{font-size:clamp(12px,.55rem + .4vw,13.5px)}
@@ -1014,9 +1018,9 @@ html.has-ship,html.has-ship *{cursor:none!important}
       </div>
       <div class="stats" data-hero>
         <div class="glass stat"><small>LỘ TRÌNH</small><b data-count="10">10</b><span>bước</span></div>
-        <div class="glass stat"><small>DỰ ÁN</small><b data-count="10">10</b><span>sản phẩm</span></div>
+        <div class="glass stat"><small>DỰ ÁN</small><b data-count="10">10</b><span>dự án thực tập</span></div>
         <div class="glass stat"><small>CÁC BÊN</small><b data-count="5">5</b><span>vai trò</span></div>
-        <div class="glass stat"><small>SPRINT</small><b data-count="6">6</b><span>giai đoạn</span></div>
+        <div class="glass stat"><small>SPRINT</small><b data-count="6">6</b><span>bước · 1 tuần</span></div>
       </div>
     </div>
     <div class="system" id="system" aria-label="Hệ hành tinh IOC: 5 vai trò xoay quanh trung tâm">
@@ -1035,8 +1039,8 @@ html.has-ship,html.has-ship *{cursor:none!important}
 <section class="screen" id="ban-do" data-title="Sơ đồ vận hành">
   <div class="wrap">
     <div class="head" data-head>
-      <div><div class="kicker"><span class="num">01</span>Sơ đồ vận hành</div><h2>Từ sinh viên đến <em>nhân sự sẵn sàng</em></h2></div>
-      <p>Theo chân một sinh viên đi qua IOC: vào từ nhà trường, đi qua bốn trụ cột, ra thành nhân sự sẵn sàng.</p>
+      <div><div class="kicker"><span class="num">01</span>Sơ đồ vận hành</div><h2>Từ sinh viên đến <em>sẵn sàng sang doanh nghiệp</em></h2></div>
+      <p>Theo chân một sinh viên: nhà trường gửi sang, thực tập trên dự án thật theo sprint cùng mentor và AI, tốt nghiệp với chứng chỉ và hồ sơ năng lực.</p>
     </div>
     <div class="flowmap" id="flowmap">
       <span class="packet" id="fmPacket" aria-hidden="true"><i data-lucide="graduation-cap"></i></span>
@@ -1051,8 +1055,8 @@ html.has-ship,html.has-ship *{cursor:none!important}
       <div class="fm-core fx" aria-label="Bốn trụ cột của IOC">
         <svg class="fm-arc" viewBox="0 0 100 100" aria-hidden="true"><circle id="fmArc" cx="50" cy="50" r="36"/></svg>
         <div class="fm-planet"><b>IOC</b><small>THE CORE</small></div>
-        <a class="fm-eng e1 up" href="#du-an"><span class="ic"><i data-lucide="layout-grid"></i></span><span class="t"><b>Dự án thật</b><small>10 sản phẩm</small></span></a>
-        <a class="fm-eng e2 up" href="#sprint"><span class="ic"><i data-lucide="refresh-ccw"></i></span><span class="t"><b>Nhịp Sprint</b><small>6 giai đoạn</small></span></a>
+        <a class="fm-eng e1 up" href="#du-an"><span class="ic"><i data-lucide="layout-grid"></i></span><span class="t"><b>Dự án thực tập</b><small>10 dự án</small></span></a>
+        <a class="fm-eng e2 up" href="#sprint"><span class="ic"><i data-lucide="refresh-ccw"></i></span><span class="t"><b>Sprint</b><small>1 tuần · 6 bước</small></span></a>
         <a class="fm-eng e3" href="#hang-ngay"><span class="ic"><i data-lucide="user-check"></i></span><span class="t"><b>Mentor kèm cặp</b><small>Review, hướng dẫn</small></span></a>
         <a class="fm-eng e4" href="#ai"><span class="ic"><i data-lucide="brain-circuit"></i></span><span class="t"><b>AI đồng hành</b><small>Lộ trình riêng</small></span></a>
       </div>
@@ -1060,9 +1064,9 @@ html.has-ship,html.has-ship *{cursor:none!important}
       <div class="glass fm-col fx">
         <span class="label">Đầu ra</span>
         <span class="ic lg red"><i data-lucide="award"></i></span>
-        <h3>Nhân sự sẵn sàng</h3>
-        <p>Kết nối doanh nghiệp</p>
-        <ul class="chips"><li>Hồ sơ năng lực</li><li>Chứng chỉ</li><li>Sẵn sàng đi làm</li></ul>
+        <h3>Tốt nghiệp &amp; chứng chỉ</h3>
+        <p>Sẵn sàng sang doanh nghiệp</p>
+        <ul class="chips"><li>Chứng chỉ</li><li>Hồ sơ năng lực</li></ul>
       </div>
     </div>
     <div class="glass fm-cap" aria-live="polite"><span class="fm-badge" id="fmStep">1/6</span><div><b id="fmTitle">Đầu vào</b><span id="fmDesc">Sinh viên từ nhà trường – đối tác: hồ sơ, đánh giá năng lực đầu vào</span></div><div class="fm-dots" id="fmDots"></div></div>
@@ -1127,23 +1131,23 @@ html.has-ship,html.has-ship *{cursor:none!important}
     </div>
     <div class="glass galaxy">
       <div class="g-intro">
-        <span class="label" style="color:var(--accent)">Hệ sinh thái kết nối</span>
-        <div class="big">8<span>sản phẩm, một dòng dữ liệu</span></div>
-        <p id="ecoDesc">Mỗi sản phẩm chia sẻ dữ liệu với nhau quanh từng học viên. AI đọc tín hiệu từ cả hệ sinh thái để gợi ý cách học lập trình phù hợp với từng bạn.</p>
+        <span class="label" style="color:var(--accent)">Dự án trọng điểm · Hệ sinh thái Edutech</span>
+        <div class="big">8<span>sản phẩm đang vận hành</span></div>
+        <p id="ecoDesc">Các sản phẩm giáo dục IOC đang vận hành, phục vụ học viên. Thực tập viên tham gia phát triển trực tiếp trên các sản phẩm này.</p>
         <div class="eco-legend"><span class="g-learn"><i></i>Học tập</span><span class="g-practice"><i></i>Thực hành dự án</span><span class="g-assess"><i></i>Đánh giá</span><span class="g-care"><i></i>Đồng hành</span></div>
         <a class="btn btn-primary btn-sm" href="https://project.rikkeiedu.com/share/ca8a441573b25c7ccbad9695ac5bf8e4" target="_blank" rel="noopener">Xem giới thiệu dự án <i data-lucide="arrow-up-right"></i></a>
       </div>
       <div class="eco" id="eco" role="group" aria-label="Hệ sinh thái sản phẩm kết nối quanh học viên">
         <svg class="eco-lines" id="ecoLines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
-        <div class="eco-hub" style="left:50%;top:50%"><span class="eco-core"><span class="eco-orbit" aria-hidden="true"><i></i></span><svg class="eco-person" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.3" r="3.7"/><path d="M4.6 19.6c1-3.7 3.9-5.8 7.4-5.8s6.4 2.1 7.4 5.8"/></svg><span class="eco-ai" aria-hidden="true"><i data-lucide="sparkles"></i></span></span><b>Học viên</b><small>AI đồng hành</small></div>
-        <button class="eco-node g-learn" data-k="lmsai" data-x="50.0" data-y="13.0" data-d="Lớp, môn, bài tập, điểm — AI gợi ý lộ trình học riêng" style="left:50.0%;top:13.0%"><span class="ic"><i data-lucide="graduation-cap"></i><em class="eco-no">01</em></span><b>Rikkei LMS AI</b><small>Lớp, bài tập, điểm</small></button>
-        <button class="eco-node g-learn" data-k="meet" data-x="12.0" data-y="50.0" data-d="Họp, lớp học trực tuyến tự vận hành" style="left:12.0%;top:50.0%"><span class="ic"><i data-lucide="video"></i><em class="eco-no">07</em></span><b>Rikkei Meet</b><small>Lớp học trực tuyến</small></button>
-        <button class="eco-node g-learn" data-k="connect" data-x="76.9" data-y="23.8" data-d="Giám sát giờ học, giờ thi trên máy học viên" style="left:76.9%;top:23.8%"><span class="ic"><i data-lucide="monitor-check"></i><em class="eco-no">02</em></span><b>LMS Connect</b><small>Giám sát giờ học</small></button>
-        <button class="eco-node g-practice" data-k="flow" data-x="50.0" data-y="87.0" data-d="Vẽ sơ đồ quy trình, cộng tác nhiều người" style="left:50.0%;top:87.0%"><span class="ic"><i data-lucide="workflow"></i><em class="eco-no">05</em></span><b>LMS Flow</b><small>Sơ đồ quy trình</small></button>
-        <button class="eco-node g-assess" data-k="exam" data-x="88.0" data-y="50.0" data-d="Tổ chức thi, chấm tự động, đánh giá năng lực" style="left:88.0%;top:50.0%"><span class="ic"><i data-lucide="clipboard-check"></i><em class="eco-no">03</em></span><b>Hệ thống khảo thí</b><small>Thi, chấm tự động</small></button>
-        <button class="eco-node g-practice" data-k="project" data-x="23.1" data-y="76.2" data-d="Scrum, Kanban gắn kho mã nguồn" style="left:23.1%;top:76.2%"><span class="ic"><i data-lucide="kanban"></i><em class="eco-no">06</em></span><b>Rikkei Project</b><small>Scrum, Kanban</small></button>
-        <button class="eco-node g-practice" data-k="intern" data-x="76.9" data-y="76.2" data-d="Đợt thực tập, nhóm, task" style="left:76.9%;top:76.2%"><span class="ic"><i data-lucide="briefcase"></i><em class="eco-no">04</em></span><b>Quản lý Internship</b><small>Đợt, nhóm, task</small></button>
-        <button class="eco-node g-care" data-k="care" data-x="23.1" data-y="23.8" data-d="Phát hiện sớm, hỗ trợ học viên 4 tầng" style="left:23.1%;top:23.8%"><span class="ic"><i data-lucide="heart-handshake"></i><em class="eco-no">08</em></span><b>Chăm sóc sinh viên</b><small>Hỗ trợ 4 tầng</small></button>
+        <div class="eco-hub" style="left:50%;top:50%"><span class="eco-core"><span class="eco-orbit" aria-hidden="true"><i></i></span><svg class="eco-person" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.3" r="3.7"/><path d="M4.6 19.6c1-3.7 3.9-5.8 7.4-5.8s6.4 2.1 7.4 5.8"/></svg><span class="eco-ai" aria-hidden="true"><i data-lucide="sparkles"></i></span></span><b>Học viên</b><small>Hệ sinh thái Edutech</small></div>
+        <button class="eco-node g-learn" data-k="lmsai" data-x="50.0" data-y="13.0" data-d="Học tập trực tuyến: lớp, môn, bài tập, điểm" style="left:50.0%;top:13.0%"><span class="ic"><i data-lucide="graduation-cap"></i><em class="eco-no">01</em></span><b>Rikkei LMS AI</b><small>Lớp, môn, bài tập, điểm</small></button>
+        <button class="eco-node g-learn" data-k="meet" data-x="12.0" data-y="50.0" data-d="Họp, lớp học trực tuyến" style="left:12.0%;top:50.0%"><span class="ic"><i data-lucide="video"></i><em class="eco-no">07</em></span><b>Rikkei Meet</b><small>Họp, lớp học trực tuyến</small></button>
+        <button class="eco-node g-learn" data-k="connect" data-x="76.9" data-y="23.8" data-d="Giám sát giờ học, giờ thi trên máy học viên" style="left:76.9%;top:23.8%"><span class="ic"><i data-lucide="monitor-check"></i><em class="eco-no">02</em></span><b>LMS Connect</b><small>Giám sát giờ học, giờ thi</small></button>
+        <button class="eco-node g-practice" data-k="flow" data-x="50.0" data-y="87.0" data-d="Vẽ sơ đồ quy trình nhiều người cùng lúc" style="left:50.0%;top:87.0%"><span class="ic"><i data-lucide="workflow"></i><em class="eco-no">05</em></span><b>LMS Flow</b><small>Sơ đồ quy trình cộng tác</small></button>
+        <button class="eco-node g-assess" data-k="exam" data-x="88.0" data-y="50.0" data-d="Tổ chức thi, đánh giá năng lực" style="left:88.0%;top:50.0%"><span class="ic"><i data-lucide="clipboard-check"></i><em class="eco-no">03</em></span><b>Hệ thống khảo thí</b><small>Thi, đánh giá năng lực</small></button>
+        <button class="eco-node g-practice" data-k="project" data-x="23.1" data-y="76.2" data-d="Quản lý dự án phần mềm theo Scrum" style="left:23.1%;top:76.2%"><span class="ic"><i data-lucide="kanban"></i><em class="eco-no">06</em></span><b>Rikkei Project</b><small>Dự án phần mềm, Scrum</small></button>
+        <button class="eco-node g-practice" data-k="intern" data-x="76.9" data-y="76.2" data-d="Quản lý đợt thực tập, nhóm, task, đánh giá" style="left:76.9%;top:76.2%"><span class="ic"><i data-lucide="briefcase"></i><em class="eco-no">04</em></span><b>Quản lý Internship</b><small>Đợt, nhóm, task, đánh giá</small></button>
+        <button class="eco-node g-care" data-k="care" data-x="23.1" data-y="23.8" data-d="Phát hiện sớm, hỗ trợ học viên" style="left:23.1%;top:23.8%"><span class="ic"><i data-lucide="heart-handshake"></i><em class="eco-no">08</em></span><b>Chăm sóc sinh viên</b><small>Phát hiện sớm, hỗ trợ</small></button>
       </div>
     </div>
   </div>
@@ -1174,14 +1178,14 @@ html.has-ship,html.has-ship *{cursor:none!important}
   <div class="screen-body">
     <div class="wrap">
       <div class="head" data-head>
-        <div><div class="kicker"><span class="num">05</span>Quy trình thực tập</div><h2>Lộ trình <em>10 bước</em>, 4 chặng bay</h2></div>
-        <p>Cuộn để tàu bay dọc quỹ đạo. Mỗi bước ghi rõ AI hỗ trợ gì và những bên nào cùng tham gia.</p>
+        <div><div class="kicker"><span class="num">05</span>Quy trình thực tập</div><h2>Lộ trình thực tập <em>10 bước</em> tại Rikkei IOC</h2></div>
+        <p>AI xuyên suốt lộ trình: phân tích dữ liệu từng thực tập sinh, lộ trình thực tập riêng cho mỗi bạn. Mỗi bước ghi rõ AI hỗ trợ gì và những bên nào tham gia.</p>
       </div>
       <div class="flight-phases" id="flightPhases">
-        <button class="fp on" data-step="0"><i data-lucide="radar"></i><span><small>CHẶNG 1 · BƯỚC 01–03</small><b>Chuẩn bị</b></span></button>
-        <button class="fp" data-step="3"><i data-lucide="rocket"></i><span><small>CHẶNG 2 · BƯỚC 04–05</small><b>Khởi động dự án</b></span></button>
-        <button class="fp" data-step="5"><i data-lucide="orbit"></i><span><small>CHẶNG 3 · BƯỚC 06–08</small><b>Thực chiến Sprint</b></span></button>
-        <button class="fp" data-step="8"><i data-lucide="award"></i><span><small>CHẶNG 4 · BƯỚC 09–10</small><b>Hoàn thành</b></span></button>
+        <button class="fp on" data-step="0"><i data-lucide="radar"></i><span><small>BƯỚC 01–03</small><b>Tiếp nhận → Trải nghiệm</b></span></button>
+        <button class="fp" data-step="3"><i data-lucide="rocket"></i><span><small>BƯỚC 04–05</small><b>Phân nhóm → Setup</b></span></button>
+        <button class="fp" data-step="5"><i data-lucide="orbit"></i><span><small>BƯỚC 06–08</small><b>Sprint 1 → Sprint N</b></span></button>
+        <button class="fp" data-step="8"><i data-lucide="award"></i><span><small>BƯỚC 09–10</small><b>Bảo vệ → Tốt nghiệp</b></span></button>
       </div>
     </div>
     <div class="h-view" id="hView">
@@ -1209,8 +1213,8 @@ html.has-ship,html.has-ship *{cursor:none!important}
 <section class="screen" id="sprint" data-title="Vòng Sprint">
   <div class="wrap">
     <div class="head" data-head>
-      <div><div class="kicker"><span class="num">06</span>Sprint</div><h2>Mỗi Sprint là <em>một vòng quỹ đạo</em></h2></div>
-      <p>Sáu giai đoạn nối thành một vòng; kết quả vòng trước là đầu vào cho vòng sau.</p>
+      <div><div class="kicker"><span class="num">06</span>Sprint</div><h2>Lộ trình triển khai <em>một sprint</em> thực tập</h2></div>
+      <p>Mỗi sprint kéo dài 1 tuần, gồm 6 bước: từ lập kế hoạch đến đánh giá, định hướng.</p>
     </div>
     <div class="sprint">
       <div class="cycle" id="cycle">
@@ -1220,7 +1224,7 @@ html.has-ship,html.has-ship *{cursor:none!important}
           <circle class="comet-tail" id="cometTail" r="10" cx="250" cy="45"/>
           <circle class="comet" id="comet" r="6" cx="250" cy="45"/>
         </svg>
-        <div class="cycle-core"><b>Sprint</b><small id="lapNo">VÒNG 1</small></div>
+        <div class="cycle-core"><b>Sprint</b><em class="sp-len">1 tuần · 6 bước</em><small id="lapNo">VÒNG 1</small></div>
       </div>
     </div>
   </div>
@@ -1249,23 +1253,23 @@ html.has-ship,html.has-ship *{cursor:none!important}
 <section class="screen" id="hang-ngay" data-title="Một ngày làm việc">
   <div class="wrap">
     <div class="head" data-head>
-      <div><div class="kicker"><span class="num">08</span>Một ngày làm việc</div><h2>Sáu bước <em>mỗi ngày</em></h2></div>
+      <div><div class="kicker"><span class="num">08</span>Một ngày làm việc</div><h2>Quy trình làm việc <em>hằng ngày</em></h2></div>
       <p>Từ kiểm tra nhiệm vụ đến theo dõi kết quả và đặt mục tiêu cho ngày tiếp theo.</p>
     </div>
     <div class="log" id="log">
       <span class="log-line" aria-hidden="true"><i></i></span>
-      <div class="dstep"><span class="ic"><i data-lucide="list-checks"></i></span><div class="glass"><span class="label">Bước 01</span><h4>Kiểm tra nhiệm vụ</h4><p>Xem task, ưu tiên, thời hạn</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
-      <div class="dstep"><span class="ic"><i data-lucide="code"></i></span><div class="glass"><span class="label">Bước 02</span><h4>Triển khai công việc</h4><p>Làm tính năng, cập nhật tiến độ</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
-      <div class="dstep"><span class="ic"><i data-lucide="messages-square"></i></span><div class="glass"><span class="label">Bước 03</span><h4>Trao đổi &amp; hỗ trợ</h4><p>Hỏi đáp, nhận gợi ý giải pháp</p><span class="owner mentor"><i data-lucide="user-check"></i>Mentor</span></div></div>
-      <div class="dstep"><span class="ic"><i data-lucide="git-pull-request"></i></span><div class="glass"><span class="label">Bước 04</span><h4>Review &amp; hoàn thiện</h4><p>Sửa theo góp ý</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
-      <div class="dstep"><span class="ic"><i data-lucide="presentation"></i></span><div class="glass"><span class="label">Bước 05</span><h4>Báo cáo &amp; Demo</h4><p>Trình bày kết quả công việc</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
-      <div class="dstep"><span class="ic"><i data-lucide="trending-up"></i></span><div class="glass"><span class="label">Bước 06</span><h4>Theo dõi kết quả</h4><p>Nhận phản hồi, đặt mục tiêu</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
+      <div class="dstep"><span class="ic"><i data-lucide="list-checks"></i></span><div class="glass"><span class="label">Bước 01</span><h4>Kiểm tra nhiệm vụ hằng ngày</h4><p>Xem danh sách task và ưu tiên. Nắm rõ yêu cầu, thời hạn</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
+      <div class="dstep"><span class="ic"><i data-lucide="code"></i></span><div class="glass"><span class="label">Bước 02</span><h4>Triển khai công việc</h4><p>Phát triển tính năng, xử lý vấn đề. Cập nhật tiến độ trên IOC</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
+      <div class="dstep"><span class="ic"><i data-lucide="messages-square"></i></span><div class="glass"><span class="label">Bước 03</span><h4>Trao đổi &amp; nhận hỗ trợ</h4><p>Đặt câu hỏi, trao đổi với Mentor. Nhận hướng dẫn, gợi ý giải pháp</p><span class="owner mentor"><i data-lucide="user-check"></i>Mentor</span></div></div>
+      <div class="dstep"><span class="ic"><i data-lucide="git-pull-request"></i></span><div class="glass"><span class="label">Bước 04</span><h4>Review &amp; hoàn thiện</h4><p>Sửa đổi theo góp ý. Đảm bảo chất lượng sản phẩm</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
+      <div class="dstep"><span class="ic"><i data-lucide="presentation"></i></span><div class="glass"><span class="label">Bước 05</span><h4>Báo cáo &amp; Demo</h4><p>Trình bày kết quả công việc. Tham gia đánh giá cùng dự án</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
+      <div class="dstep"><span class="ic"><i data-lucide="trending-up"></i></span><div class="glass"><span class="label">Bước 06</span><h4>Theo dõi kết quả</h4><p>Xem đánh giá, nhận phản hồi. Đặt mục tiêu cho ngày tiếp theo</p><span class="owner"><i data-lucide="user"></i>Thực tập sinh</span></div></div>
     </div>
     <div class="sub-label">Sự đồng hành từ các bên</div>
     <div class="support" id="support">
-      <div><div class="glass"><span class="ic sm"><i data-lucide="settings-2"></i></span><div><h4>Vận hành</h4><ul><li><i data-lucide="check"></i>Theo dõi tiến độ, xử lý vấn đề</li><li><i data-lucide="check"></i>Học liệu, training bổ sung</li></ul></div></div></div>
-      <div><div class="glass"><span class="ic sm"><i data-lucide="user-check"></i></span><div><h4>Mentor</h4><ul><li><i data-lucide="check"></i>Hướng dẫn chuyên môn, đánh giá</li><li><i data-lucide="check"></i>Định hướng phát triển năng lực</li></ul></div></div></div>
-      <div><div class="glass"><span class="ic sm"><i data-lucide="school"></i></span><div><h4>Đối tác – Nhà trường</h4><ul><li><i data-lucide="check"></i>Theo dõi quá trình thực tập</li><li><i data-lucide="check"></i>Phối hợp nâng cao chất lượng</li></ul></div></div></div>
+      <div><div class="glass"><span class="ic sm"><i data-lucide="settings-2"></i></span><div><h4>Vận hành</h4><ul><li><i data-lucide="check"></i>Theo dõi tiến độ, hỗ trợ xử lý vấn đề</li><li><i data-lucide="check"></i>Cung cấp học liệu, training bổ sung</li></ul></div></div></div>
+      <div><div class="glass"><span class="ic sm"><i data-lucide="user-check"></i></span><div><h4>Mentor</h4><ul><li><i data-lucide="check"></i>Hướng dẫn chuyên môn, đánh giá kết quả</li><li><i data-lucide="check"></i>Định hướng phát triển năng lực</li></ul></div></div></div>
+      <div><div class="glass"><span class="ic sm"><i data-lucide="school"></i></span><div><h4>Đối tác – Nhà trường</h4><ul><li><i data-lucide="check"></i>Theo dõi quá trình thực tập</li><li><i data-lucide="check"></i>Phối hợp cùng IOC nâng cao chất lượng</li></ul></div></div></div>
     </div>
   </div>
 </section>
@@ -1275,11 +1279,11 @@ html.has-ship,html.has-ship *{cursor:none!important}
   <div class="wrap">
     <div class="head" data-head>
       <div><div class="kicker"><span class="num">09</span>AI cá nhân hoá</div><h2>Dữ liệu thực tập thành <em>lộ trình riêng</em></h2></div>
-      <p>Thu thập → phân tích, dự đoán → đề xuất. Vòng lặp chạy lại sau mỗi Sprint.</p>
+      <p>AI phân tích dữ liệu, lộ trình thực tập riêng cho từng thực tập sinh.</p>
     </div>
     <div class="pipeline" id="pipeline">
       <div class="glass pipe">
-        <div class="pipe-top"><span class="ic"><i data-lucide="database"></i></span><div><span class="label">01 · Đầu vào</span><h3>Dữ liệu hành vi</h3></div></div>
+        <div class="pipe-top"><span class="ic"><i data-lucide="database"></i></span><div><span class="label">01 · Đầu vào</span><h3>Thu thập dữ liệu hành vi</h3></div></div>
         <div class="signals">
           <span class="signal"><i data-lucide="git-commit-horizontal"></i>Commit, pull request</span>
           <span class="signal"><i data-lucide="repeat"></i>Số vòng review code</span>
@@ -1315,17 +1319,17 @@ html.has-ship,html.has-ship *{cursor:none!important}
         <span class="p-arrow" aria-hidden="true"><i data-lucide="chevron-right"></i></span>
       </div>
       <div class="glass pipe">
-        <div class="pipe-top"><span class="ic"><i data-lucide="route"></i></span><div><span class="label">03 · Đầu ra</span><h3>Lộ trình riêng</h3></div></div>
+        <div class="pipe-top"><span class="ic"><i data-lucide="route"></i></span><div><span class="label">03 · Đầu ra</span><h3>Lộ trình riêng cho từng bạn</h3></div></div>
         <ul class="outs">
           <li><i data-lucide="target"></i>Task đúng mức năng lực</li>
           <li><i data-lucide="book-open"></i>Kỹ năng cần bổ sung</li>
-          <li><i data-lucide="user-check"></i>Kèm 1–1 với mentor khi cần</li>
-          <li><i data-lucide="flag"></i>Mục tiêu Sprint tiếp theo</li>
+          <li><i data-lucide="user-check"></i>Buổi kèm 1–1 với mentor khi cần</li>
+          <li><i data-lucide="flag"></i>Mục tiêu sprint tiếp theo</li>
           <li><i data-lucide="building-2"></i>Thời điểm sẵn sàng sang doanh nghiệp</li>
         </ul>
       </div>
     </div>
-    <div class="loop"><i data-lucide="undo-2"></i>Lặp lại sau mỗi Sprint — dữ liệu mới cập nhật lại lộ trình</div>
+    <div class="loop"><i data-lucide="sparkles"></i>AI xuyên suốt lộ trình — phân tích dữ liệu từng thực tập sinh</div>
   </div>
 </section>
 
@@ -1548,8 +1552,8 @@ html.has-ship,html.has-ship *{cursor:none!important}
   const PJSHARE='https://project.rikkeiedu.com/share/';
   const PJ=[
     {st:'dev',cat:'Cổng việc làm',n:'Rikkei Jobs',d:'Hồ sơ năng lực đã xác thực, kết nối học viên với doanh nghiệp.',k:['Go','MySQL','Astro'],ic:'briefcase',intro:PJSHARE+'16d4e66cf2dc847ed8e47317f323f67c'},
-    {st:'live',cat:'Đánh giá năng lực',n:'Hệ thống khảo thí',d:'Tổ chức thi, chấm tự động, điểm về thẳng LMS.',k:['NestJS','React'],ic:'clipboard-check',intro:PJSHARE+'8d3f69116c6e20bd375933b68b64e1af'},
-    {st:'live',cat:'Giám sát học tập',n:'Rikkei LMS Connect',d:'Ứng dụng học tập trên máy học viên, đi kèm Rikkei IDE.',k:['Go','Wails','MySQL'],ic:'monitor-check',intro:PJSHARE+'e766b087d1798f1f9cf2a24d93fcc87e'},
+    {st:'live',cat:'Đánh giá năng lực',n:'Hệ thống khảo thí',d:'Tổ chức thi, chấm tự động, điểm về thẳng LMS.',k:['NestJS','React'],ic:'clipboard-check',intro:PJSHARE+'8d3f69116c6e20bd375933b68b64e1af',url:'https://khaothi.rikkei.edu.vn'},
+    {st:'live',cat:'Giám sát học tập',n:'Rikkei LMS Connect',d:'Ứng dụng học tập trên máy học viên, đi kèm Rikkei IDE.',k:['Go','Wails','MySQL'],ic:'monitor-check',intro:PJSHARE+'e766b087d1798f1f9cf2a24d93fcc87e',app:'Ứng dụng cài trên máy học viên'},
     {st:'live',cat:'Chăm sóc học viên',n:'Chăm sóc sinh viên',d:'Phát hiện sớm học viên cần hỗ trợ, chăm sóc theo 4 tầng.',k:['Go','MySQL','Next.js'],ic:'heart-handshake',intro:PJSHARE+'659ac1dbce9304c74a05bd4d0f61e0d9'},
     {st:'live',cat:'Họp trực tuyến',n:'Rikkei Meet',d:'Phòng họp, lớp học trực tuyến tự vận hành.',k:['Go','Flutter','WebRTC'],ic:'video',intro:PJSHARE+'12262c2347a8f2a1d6d4e4dddcd7a9a2',url:'https://meet.rikkeiedu.com'},
     {st:'live',cat:'Quản lý dự án',n:'Rikkei Project',d:'Scrum, Kanban gắn kho mã nguồn.',k:['Go','MySQL','React'],ic:'kanban',intro:PJSHARE+'4c18c01b13e29a9a5c70322929c40c3c',url:'https://project.rikkeiedu.com'},
@@ -1564,7 +1568,7 @@ html.has-ship,html.has-ship *{cursor:none!important}
   const pjRows=[...pjList.querySelectorAll('.pj-row')];
   const pjMobile=matchMedia('(max-width: 860px)');
   let pjCur=-1;
-  const host=x=>x.url?x.url.replace(/^https?:\/\//,''):(x.intro?'project.rikkeiedu.com/share':'mô phỏng nội bộ');
+  const host=x=>x.url?x.url.replace(/^https?:\/\//,''):x.app?x.app:(x.intro?'project.rikkeiedu.com/share':'mô phỏng nội bộ');
   function pjHighlight(){const r=pjRows[pjCur];if(!r||r.hidden){pjHl.style.opacity=0;return;}pjHl.style.opacity=1;pjHl.style.height=r.offsetHeight+'px';pjHl.style.transform=`translateY(${r.offsetTop}px)`;}
   function pjSelect(i,anim=true){
     if(i===pjCur)return;pjCur=i;const x=PJ[i];
@@ -1572,7 +1576,7 @@ html.has-ship,html.has-ship *{cursor:none!important}
     pjDetail.innerHTML=`<div class="pj-prev"><div class="pj-bar"><i></i><i></i><i></i><span>${x.url?'<i data-lucide="lock"></i>':''}${host(x)}</span></div><div class="pj-canvas"><span class="pj-ic"><i data-lucide="${x.ic}"></i></span><span class="pj-sk"><b></b><b></b><b></b><b></b></span></div></div>
       <div class="pj-body"><div class="pj-meta"><span class="label">${x.cat}</span><span class="badge ${STL[x.st][0]}">${STL[x.st][1]}</span><span class="pj-no">${String(i+1).padStart(2,'0')} / ${PJ.length}</span></div>
       <h3>${x.n}</h3><p>${x.d}</p><div class="stack">${x.k.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-      <div class="pj-cta">${x.intro?`<a class="btn btn-primary btn-sm" href="${x.intro}" target="_blank" rel="noopener">Giới thiệu dự án <i data-lucide="arrow-up-right"></i></a>`:''}${x.url?`<a class="btn btn-ghost btn-sm" href="${x.url}" target="_blank" rel="noopener">Mở sản phẩm <i data-lucide="external-link"></i></a>`:''}${!x.intro?'<span class="muted"><i data-lucide="flask-conical"></i>Dự án mô phỏng nghiệp vụ — dùng cho đào tạo</span>':''}</div></div>`;
+      <div class="pj-cta">${x.intro?`<a class="btn btn-primary btn-sm" href="${x.intro}" target="_blank" rel="noopener">Giới thiệu dự án <i data-lucide="arrow-up-right"></i></a>`:''}${x.url?`<a class="btn btn-ghost btn-sm" href="${x.url}" target="_blank" rel="noopener">Mở sản phẩm <i data-lucide="external-link"></i></a>`:''}${x.app?`<span class="muted"><i data-lucide="download"></i>${x.app}, không có bản web</span>`:''}${!x.intro?'<span class="muted"><i data-lucide="flask-conical"></i>Dự án mô phỏng nghiệp vụ — dùng cho đào tạo</span>':''}</div></div>`;
     if(pjMobile.matches){pjRows[i].after(pjDetail);pjDetail.classList.add('inline');}
     else if(pjDetail.parentElement!==pjWrap){pjWrap.prepend(pjDetail);pjDetail.classList.remove('inline');}
     icons();pjHighlight();
@@ -1604,7 +1608,7 @@ html.has-ship,html.has-ship *{cursor:none!important}
     [0,'Tiếp nhận sinh viên','Đăng ký – Hồ sơ – Xác nhận tham gia','Định hướng thực tập','NT VH TV'],
     [0,'Đánh giá năng lực đầu vào','Kiểm tra – Phỏng vấn – Phân loại năng lực','Chỉ ra kỹ năng còn thiếu','TV MT VH'],
     [0,'Trải nghiệm môi trường doanh nghiệp','Văn hoá – Quy trình – Công việc','Giải đáp quy trình','TV MT VH'],
-    [1,'Phân nhóm, nhận dự án','Ghép nhóm – Giao dự án – Chỉ định mentor','Neo lộ trình cá nhân','VH MT TV'],
+    [1,'Phân nhóm, nhận dự án','Ghép nhóm – Giao dự án – Chỉ định mentor','','VH MT TV'],
     [1,'Setup môi trường dự án','Công cụ – Tài khoản – Mã nguồn','Hỗ trợ cài đặt','MT TV'],
     [2,'Triển khai Sprint 1','Thực hiện – Demo – Đánh giá','Review code','TV MT VH NT',1],
     [2,'Triển khai Sprint 2…','Nâng cao kỹ năng – Tăng độ phức tạp','Gợi ý kỹ năng mới','TV MT VH NT',1],
@@ -1614,9 +1618,9 @@ html.has-ship,html.has-ship *{cursor:none!important}
   ];
   const PHN=['Chuẩn bị','Khởi động dự án','Thực chiến Sprint','Hoàn thành'];
   const hView=document.getElementById('hView'),hTrack=document.getElementById('hTrack'),fps=[...document.querySelectorAll('#flightPhases .fp')],hPrev=document.getElementById('hPrev'),hNext=document.getElementById('hNext'),hCount=document.getElementById('hCount');
-  hTrack.insertAdjacentHTML('beforeend',STEPS.map((s,i)=>`<div class="fstep${s[0]===3?' final':''}"><span class="node">${String(i+1).padStart(2,'0')}</span><div class="glass"><span class="ph">Chặng ${s[0]+1} · ${PHN[s[0]]}</span><h4>${s[1].replace('&','&amp;')}</h4><p>${s[2]}</p>${s[5]?'<span class="plus">+ Bổ sung kỹ năng</span>':''}<div class="s-foot"><span class="ai"><i data-lucide="sparkles"></i>${s[3]}</span><span class="avs">${s[4].split(' ').map(k=>`<span class="av" title="${AVN[k]}">${k}</span>`).join('')}</span></div></div></div>`).join(''));
+  hTrack.insertAdjacentHTML('beforeend',STEPS.map((s,i)=>`<div class="fstep${s[0]===3?' final':''}"><span class="node">${String(i+1).padStart(2,'0')}</span><div class="glass"><span class="ph">Bước ${String(i+1).padStart(2,'0')} / 10</span><h4>${s[1].replace('&','&amp;')}</h4><p>${s[2]}</p>${s[5]?'<span class="plus">+ Bổ sung kỹ năng</span>':''}<div class="s-foot">${s[3]?`<span class="ai"><i data-lucide="sparkles"></i>${s[3]}</span>`:'<span></span>'}<span class="avs">${s[4].split(' ').map(k=>`<span class="av" title="${AVN[k]}">${k}</span>`).join('')}</span></div></div></div>`).join(''));
   /* journey destination after step 10 */
-  hTrack.insertAdjacentHTML('beforeend',`<div class="fdest" aria-label="Đích đến của hành trình"><span class="dest-planet"><i data-lucide="flag"></i></span><div class="glass"><span class="ph">Đích đến</span><h4>Doanh nghiệp đối tác</h4><p>Nhân sự sẵn sàng đi làm, mang theo năng lực đã được chứng minh trên dự án thật.</p><ul class="dest-chips"><li><i data-lucide="file-badge"></i>Hồ sơ năng lực</li><li><i data-lucide="award"></i>Chứng chỉ</li><li><i data-lucide="handshake"></i>Kết nối tuyển dụng</li></ul></div></div>`);
+  hTrack.insertAdjacentHTML('beforeend',`<div class="fdest" aria-label="Đích đến của hành trình"><span class="dest-planet"><i data-lucide="flag"></i></span><div class="glass"><span class="ph">Đích đến</span><h4>Sẵn sàng sang doanh nghiệp</h4><p>Tốt nghiệp với chứng chỉ và hồ sơ năng lực; AI xác định thời điểm sẵn sàng sang doanh nghiệp.</p><ul class="dest-chips"><li><i data-lucide="award"></i>Chứng chỉ</li><li><i data-lucide="file-badge"></i>Hồ sơ năng lực</li></ul></div></div>`);
   const fsteps=[...hTrack.querySelectorAll('.fstep')],fdest=hTrack.querySelector('.fdest');
   let hx=0;
   const hMax=()=>Math.max(0,hTrack.scrollWidth-hView.clientWidth);
@@ -1649,10 +1653,10 @@ html.has-ship,html.has-ship *{cursor:none!important}
   /* =========================================================
      06 SPRINT — comet orbiting the six phases
      ========================================================= */
-  const SP=[['Lập kế hoạch','calendar-range'],['Thực hiện','code'],['Hướng dẫn','user-check'],['Kiểm tra','git-pull-request'],['Trình bày','presentation'],['Đánh giá','trending-up']];
+  const SP=[['Lập kế hoạch','Sprint Planning','calendar-range'],['Thực hiện','Task Execution','code'],['Hướng dẫn, bổ sung kỹ năng','Mentor kèm cặp','user-check'],['Kiểm tra, hoàn thiện','Review, sửa lỗi','git-pull-request'],['Trình bày kết quả','Sprint Demo','presentation'],['Đánh giá, định hướng','Retro, lên bậc','trending-up']];
   const cycle=document.getElementById('cycle'),arc=document.getElementById('cycleArc'),comet=document.getElementById('comet'),cometTail=document.getElementById('cometTail'),lapNo=document.getElementById('lapNo');
   const CR=205,CIRC=2*Math.PI*CR; arc.style.strokeDasharray=CIRC; arc.style.strokeDashoffset=CIRC;
-  cycle.insertAdjacentHTML('beforeend',SP.map((p,i)=>`<div class="moon-node mn${i}"><span class="m"><i data-lucide="${p[1]}"></i></span><span class="lbl">0${i+1} · ${p[0]}</span></div>`).join(''));
+  cycle.insertAdjacentHTML('beforeend',SP.map((p,i)=>`<div class="moon-node mn${i}"><span class="m"><i data-lucide="${p[2]}"></i></span><span class="lbl">0${i+1} · ${p[0]}<small>${p[1]}</small></span></div>`).join(''));
   const moons=[...cycle.querySelectorAll('.moon-node')];
   let sprintOn=false,spTween=null,lap=1;const ang={a:-90};
   function spTick(){
@@ -1733,11 +1737,11 @@ html.has-ship,html.has-ship *{cursor:none!important}
   const fmCols=[...fmap.querySelectorAll('.fm-col')],fmArrows=[...fmap.querySelectorAll('.f-arrow')],fmEngs=['.e1','.e2','.e3','.e4'].map(q=>fmap.querySelector(q));
   const FMS=[
     ['Đầu vào','Sinh viên từ nhà trường – đối tác: hồ sơ, đánh giá năng lực đầu vào'],
-    ['Dự án thật','Nhận dự án trên sản phẩm thật của Rikkei, xếp theo năng lực'],
-    ['Nhịp Sprint','Làm việc theo vòng Sprint 6 giai đoạn, demo và đánh giá mỗi vòng'],
+    ['Dự án thực tập','Nhận dự án trên sản phẩm thật của Rikkei, xếp theo năng lực của từng nhóm'],
+    ['Sprint','Sprint 1 tuần · 6 bước: lập kế hoạch, thực hiện, kèm cặp, hoàn thiện, demo, đánh giá'],
     ['Mentor kèm cặp','Review code, hướng dẫn và đào tạo bổ sung khi cần'],
     ['AI đồng hành','Phân tích dữ liệu thực tập, gợi ý lộ trình riêng cho từng bạn'],
-    ['Đầu ra','Nhân sự sẵn sàng: hồ sơ năng lực, chứng chỉ, kết nối doanh nghiệp']
+    ['Đầu ra','Tốt nghiệp & chứng chỉ, hồ sơ năng lực, sẵn sàng sang doanh nghiệp']
   ];
   const fmDots=document.getElementById('fmDots'); fmDots.innerHTML=FMS.map(()=>'<i></i>').join('');
   const FMC=2*Math.PI*36; let fmTL=null,fmWait=null,fmOn=false;
