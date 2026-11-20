@@ -926,10 +926,10 @@ html.has-ship,html.has-ship *{cursor:none!important}
 /* =========================================================
    SOLID THEME — flat surfaces, no glow / glass / starfield
    ========================================================= */
-:root{--space:#0d1222;--space-2:#151b2e;--space-3:#1c2339;--line:#232b42;--line-2:#323b56;--surface:#141a2c;--surface-2:#1a2135}
-html,body{background:#0d1222}
+:root{--space:#04050a;--space-2:#0c0e16;--space-3:#141722;--line:#1e2230;--line-2:#2c3142;--surface:#0b0d15;--surface-2:#12151f}
+html{background:#020308}body{background:transparent}
 .nebula,.grain,.galaxy:before,.btn::after{display:none!important}
-.nav{background:#0d1222;border-bottom:1px solid var(--line);backdrop-filter:none;-webkit-backdrop-filter:none}
+.nav{background:rgba(2,3,8,.86);border-bottom:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .next-hint,.rail em{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}
 .glass,.pj-list,.product,.day.key,.fdest .glass{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
 .day.key{border-color:var(--accent)}
@@ -1013,7 +1013,7 @@ html[data-theme="light"]{
   --space:#f4f5f9;--space-2:#ffffff;--space-3:#eceef4;--surface:#ffffff;--surface-2:#f1f3f7;
   --line:#e1e4ec;--line-2:#cdd2de;--ink:#141a2e;--muted:#4a5368;--dim:#646c80;--silver:#5a6378;--accent:#c8243d;--accent-2:#c8243d;
   color-scheme:light}
-html[data-theme="light"],html[data-theme="light"] body{background:#f4f5f9;color:var(--ink)}
+html[data-theme="light"]{background:#f4f5f9}html[data-theme="light"] body{background:transparent;color:var(--ink)}
 html[data-theme="light"] #space,html[data-theme="light"] #galaxy{display:none}
 html[data-theme="light"] .nav{background:rgba(244,245,249,.94);border-bottom-color:var(--line)}
 html[data-theme="light"] .glass,html[data-theme="light"] .pj-list,html[data-theme="light"] .product,html[data-theme="light"] .rc,html[data-theme="light"] .launch{background:#fff;border-color:var(--line);box-shadow:0 1px 2px rgba(20,26,46,.04),0 6px 20px rgba(20,26,46,.05)}
@@ -1121,6 +1121,41 @@ html[data-theme="light"] .kicker .num,html[data-theme="light"] .num{background:r
 .cycle-core{color:#fff}
 .moon-node{z-index:2}
 .moon-node .lbl{position:relative;padding:3px 8px;border-radius:6px;background:var(--space);max-width:230px}
+/* light mode: hover states */
+html[data-theme="light"] :is(.project,.product,.day,.dstep .glass,.pipe,.fm-col,.support .glass,.stat):hover{border-color:rgba(200,36,61,.35);box-shadow:0 18px 36px -20px rgba(20,26,46,.28),0 0 0 1px rgba(200,36,61,.12)}
+html[data-theme="light"] :is(.project,.product,.day,.fstep .glass,.pipe,.fm-col,.support .glass):hover .ic:not(.red){color:var(--accent);border-color:rgba(200,36,61,.5);background:#fff}
+html[data-theme="light"] .sh-node:hover,html[data-theme="light"] .fp:hover,html[data-theme="light"] :is(.signal,.outs li,.kpi):hover{border-color:rgba(20,26,46,.3)}
+html[data-theme="light"] .pj-row:hover{background:rgba(20,26,46,.03)}
+html[data-theme="light"] .seq-dots button:hover{color:var(--ink)}
+html[data-theme="light"] .seq-dots button.on,html[data-theme="light"] .seq-dots button.on:hover{color:#fff}
+html[data-theme="light"] .filter[aria-pressed="true"],html[data-theme="light"] .filter[aria-pressed="true"]:hover{color:var(--ink)}
+html[data-theme="light"] .btn-primary:hover{color:#fff}
+/* light mode: planets with stronger contrast against the light background */
+html[data-theme="light"] .planet{background:radial-gradient(circle at 32% 28%,#ffe9ec 0,#ff7a8a 9%,#e8364f 24%,#b51d37 46%,#7d1430 70%,#3f0a18 96%);box-shadow:inset 0 0 0 1px rgba(63,10,24,.25),0 36px 64px -24px rgba(63,10,24,.55)}
+html[data-theme="light"] .planet .shade{background:radial-gradient(circle at 72% 74%,transparent 30%,rgba(30,4,12,.6) 76%)}
+html[data-theme="light"] .ring{background:radial-gradient(ellipse at center,transparent 54%,rgba(110,18,40,.55) 58%,rgba(110,18,40,.12) 61%,rgba(20,26,46,.4) 65%,rgba(20,26,46,.08) 69%,rgba(200,36,61,.45) 72%,transparent 74%)}
+html[data-theme="light"] .fm-planet,html[data-theme="light"] .pf-planet{background:radial-gradient(circle at 32% 28%,#ffe3e7,#e8364f 22%,#a51d34 52%,#4e0d1d 92%);box-shadow:inset -10px -10px 22px rgba(30,4,12,.45),inset 0 0 0 1px rgba(63,10,24,.2),0 22px 40px -16px rgba(63,10,24,.55)}
+html[data-theme="light"] .cycle-core{background:radial-gradient(circle at 32% 28%,#f4f6fa,#aab3c8 18%,#4f5a78 50%,#1f2741 90%);box-shadow:inset -14px -12px 26px rgba(10,14,30,.45),inset 0 0 0 1px rgba(20,26,46,.2),0 28px 50px -20px rgba(20,26,46,.55)}
+html[data-theme="light"] .eco-core{background:radial-gradient(circle at 34% 28%,#ffd0d7,#ff6b7d 16%,#e8364f 40%,#7d1430 88%);box-shadow:0 0 0 6px var(--space),0 14px 28px -10px rgba(63,10,24,.5)}
+html[data-theme="light"] .dest-planet{background:radial-gradient(circle at 34% 28%,#fff1c9,#f2b54b 24%,#c96a22 56%,#7a3510 92%);box-shadow:0 0 0 6px var(--space),0 12px 24px -10px rgba(122,53,16,.5)}
+html[data-theme="light"] .brand-orb{background:radial-gradient(circle at 32% 30%,#ffd9de,#e8364f 30%,#8e1631 68%,#3f0a18)}
+/* sprint ring: only the icon circle is anchored on the ring; label hangs below it */
+.moon-node{display:block}
+.moon-node .m{position:relative}
+.moon-node .lbl{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%)}
+html[data-theme="light"] .h-rail .rocket{background:#fff;color:var(--accent);border-color:var(--accent);box-shadow:0 4px 12px -4px rgba(200,36,61,.4)}
+@media (min-width:1024px){.h-view{padding-top:20px}}
+/* flow map: larger info nodes around the core (icon centre stays on the orbit point) */
+.fm-eng .ic{width:clamp(48px,3.6vw,58px);height:clamp(48px,3.6vw,58px);font-size:clamp(21px,1.6vw,25px)}
+.fm-eng{gap:8px;transform:translate(-50%,calc(clamp(48px,3.6vw,58px) / -2))}
+.fm-eng.up{transform:translate(-50%,calc(-100% + clamp(48px,3.6vw,58px) / 2))}
+@media (max-width:1023px){
+  .fm-eng.e2{transform:translate(-50%,calc(clamp(48px,3.6vw,58px) / -2))}
+  .fm-eng.e4{transform:translate(-50%,calc(-100% + clamp(48px,3.6vw,58px) / 2))}
+}
+.fm-eng b{font-size:clamp(15px,.7rem + .55vw,18px)}
+.fm-eng small{font-size:clamp(12.5px,.58rem + .42vw,14.5px)}
+.fm-eng .t{padding:4px 11px;background:color-mix(in srgb,var(--space) 88%,transparent)}
 </style>
 </head>
 <body>
